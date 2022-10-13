@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace Open_Lab_04._08
 {
@@ -6,7 +7,15 @@ namespace Open_Lab_04._08
     {
         public string[] IsFourLetters(string[] strings)
         {
-            throw new NotImplementedException();
+            List<string> letters = new List<string>();
+            foreach (string word  in strings)
+            {
+                if (word.Length == 4 )
+                {
+                    letters.Add(word);
+                }
+            }
+            return  letters.ToArray();
         }
     }
 }
